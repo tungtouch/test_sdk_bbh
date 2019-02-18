@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://media.botbanhang.vn/libs/api.min.js"></script>
+  <script>
+    var BotBanHang = BotBanHang.init({
+      app_id: "225739c0-339b-11e9-9b37-637e136097a8",
+      version: "v1.3"
+    })
+
+    var category = BotBanHang.category.getCategory()
+    console.log(category)
+    var product = BotBanHang.category.getProduct({})
+    console.log(product)
+
+    // loi
+    var product = BotBanHang.category.getProduct({ id: "5c347603140772e4247bfcf1" })
+    console.log('Tim kiem 1 sp', product)
+
+
+    var listproduct = BotBanHang.category.getListProduct({
+      parent: "5b9b650b5432a6897f390797", //id cua danh muc
+      limit: "20",
+      skip: "0",
+      search: "n"
+    })
+    console.log(listproduct)
+
+    var me = BotBanHang.user.me()
+    console.log(me)
+  </script>
+</head>
+
+<body>
+  test
+</body>
+
+</html>
