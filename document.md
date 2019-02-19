@@ -598,50 +598,19 @@ BotBanHang.order.checkout({order, contact, name_ship, tel_ship, address_ship, pr
 ```
 - Request Example:
 ```
-{
-  "order": {
-    "page": "5c0729df6f92d42919aff017",
-    "client": "5c072e5fe503e8855fd52e47",
-    "userid": "2874888275870129",
-    "name_ship": "TriÂn HộpThư",
-    "orders": [
-      {
-        "id": "5c6baf2b6b255bae66a88ba2",
-        "title": "ao",
-        "price": 1000,
-        "discount": 999,
-        "images_url": [
-          "https://media.botbanhang.vn/uploads/5c0729df6f92d42919aff017/0b107770-f196-4a3f-9196-89a68732912d.png"
-        ],
-        "quantity": 2
-      }
-    ],
-    "total_price": 1998,
-    "total_quantity": 2,
-    "status": "pending",
-    "is_paid": false,
-    "is_reviewed": false,
-    "uuid": "27c8d250-3419-11e9-bbdd-8b75ba94ef7b",
-    "idorder": 1273522,
-    "createdAt": "2019-02-19T07:37:05.782Z",
-    "updatedAt": "2019-02-19T08:26:29.678Z",
-    "id": "5c6bb2216b255bae66a88d29",
-    "contact": "5c6baf716b255bae66a88bc1",
-    "tel_ship": "0333776915",
-    "address_ship": "dd,ddd,ddd",
-    "province_ship": "64",
-    "province_name": "Gia Lai",
-    "district_ship": "638",
-    "district_name": "Phú Thiện",
-    "email": null,
-    "payment": "",
-    "full_address": "dd,ddd,ddd, Phú Thiện, Gia Lai",
-    "promotion": null,
-    "phone": "+84333776915"
-  },
-  "type": "confirm"
-}
+BotBanHang.order.checkout({
+      order: {id: "5c6c2c5c62bfdde966ed83fb"}, // ID của giỏ hàng
+      contact: "5c6baf716b255bae66a88bc1", // ID thông tin người mua
+      name_ship: "TriÂn HộpThư",
+      tel_ship: "0333776915",
+      address_ship: "dd,ddd,ddd",
+      province_ship: "64",
+      district_ship: "638",
+      email: null,
+      note: null
+    })
 ```
 - Response Example:
 ```
+{"data":{}}
 ```
