@@ -252,3 +252,38 @@ BotBanHang.user.me()
   }
 }
 ```
+### 4. CONTACTS
+- Truy vấn thông tin liên hệ của người đang truy cập
+```
+BotBanHang.user.getContacts()
+```
+- Response Example:
+```
+{
+  "data": [
+    {
+      "client": "5c072e5fe503e8855fd52e47", // ID của người truy cập
+      "name": "TriÂn HộpThư",
+      "tel": "0333776915",
+      "address": "dd,ddd,ddd", 
+      "province": "64", // Mã tỉnh
+      "district": "638", // Mã huyện
+      "email": null,
+      "createdAt": "2019-02-19T07:25:37.502Z",
+      "updatedAt": "2019-02-19T07:25:37.502Z",
+      "id": "5c6baf716b255bae66a88bc1" // ID riêng của địa chỉ
+    }
+  ]
+}
+```
+- Thêm thông tin liên hệ của người đang truy cập
+```
+BotBanHang.user.addContact({
+  name: "ten",
+  email:"dia_chi_mail",
+  tel:"so_dien_thoai", 
+  address:"dia_chi", 
+  province:"ma_tinh", 
+  district:"ma_huyen"
+  })
+```

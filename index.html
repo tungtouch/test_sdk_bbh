@@ -15,12 +15,12 @@
     })
 
     var category = BotBanHang.category.getCategory()
-    console.log('BotBanHang.category.getCategory',category)
+    console.log('BotBanHang.category.getCategory', category)
 
     var product = BotBanHang.category.getProduct({})
-    console.log('Danh sach toan bo san pham',product)
+    console.log('Danh sach toan bo san pham', product)
 
-    
+
     var product = BotBanHang.category.getProduct({ id: "5c6b8909c1e29de60e15f72f" })
     console.log('Tim kiem 1 sp', product)
 
@@ -31,13 +31,23 @@
       skip: "0",
       search: "trang"
     })
-    console.log('listproduct',listproduct)
+    console.log('listproduct', listproduct)
 
     var me = BotBanHang.user.me()
-    console.log('Thong tin cua toi',me)
+    console.log('Thong tin cua toi', me)
 
     var contact = BotBanHang.user.getContacts()
     console.log('contact', contact)
+
+    var addcontact = BotBanHang.user.addContact({
+      name: "Minh Thien",
+      email: "adfd@gmail.com",
+      tel: "03887464",
+      address: "dfdf,dfdf,dfdfd",
+      province: "64",
+      district: "638"
+    })
+    console.log('THem dia chi', addcontact)
   </script>
 </head>
 
