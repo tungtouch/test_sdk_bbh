@@ -272,6 +272,9 @@ BotBanHang.user.getContacts()
       "createdAt": "2019-02-19T07:25:37.502Z",
       "updatedAt": "2019-02-19T07:25:37.502Z",
       "id": "5c6baf716b255bae66a88bc1" // ID riêng của địa chỉ
+    },
+    {
+      // Thông tin địa chỉ tiếp theo
     }
   ]
 }
@@ -287,3 +290,42 @@ BotBanHang.user.addContact({
   district:"ma_huyen"
   })
 ```
+- Request Example:
+```
+BotBanHang.user.addContact({
+      name: "Minh Thien",
+      email: "adfd@gmail.com",
+      tel: "03887464",
+      address: "dfdf,dfdf,dfdfd",
+      province: "64",
+      district: "638"
+    })
+```    
+- Response Example:
+```
+{
+  "data": [
+    {
+      "client": "5c072e5fe503e8855fd52e47", // ID của người truy cập
+      "name": "Minh Thien",
+      "tel": "03887464",
+      "address": "dfdf,dfdf,dfdfd", 
+      "province": "64", // Mã tỉnh
+      "district": "638", // Mã huyện
+      "email": nuadfd@gmail.comll,
+      "createdAt": "2019-02-19T07:25:37.502Z",
+      "updatedAt": "2019-02-19T07:25:37.502Z",
+      "id": "5c6baf716b255bae66a88er4" // ID riêng của địa chỉ
+    }
+  ]
+}
+```
+- Xóa thông tin liên hệ của người đang truy cập
+```
+BotBanHang.user.removeContact(id: "id riêng của địa chỉ")
+```
+- Request Example:
+```
+BotBanHang.user.removeContact({id: "5c6bb4996b255bae66a88e61"})
+```
+- Response Example:
