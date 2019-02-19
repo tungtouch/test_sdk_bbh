@@ -65,10 +65,21 @@
     // var page = BotBanHang.page.getPage()
     // console.log('page', page)
 
-    var  getcar = BotBanHang.order.getCart()
+    var getcar = BotBanHang.order.getCart()
     console.log('getcar', getcar)
 
-    var updateCar = BotBanHang.order.updateCart({orders:""})
+    var updateCar = BotBanHang.order.updateCart({
+
+      "id": "5c6baf2b6b255bae66a88ba2",
+      "title": "ao",
+      "price": 1000,
+      "discount": 999,
+      "images_url": [
+        "https://media.botbanhang.vn/uploads/5c0729df6f92d42919aff017/0b107770-f196-4a3f-9196-89a68732912d.png"
+      ],
+      "quantity": 1
+
+    })
     console.log('Updatecar', updateCar)
   </script>
 </head>
