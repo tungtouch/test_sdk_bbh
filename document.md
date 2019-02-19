@@ -181,6 +181,58 @@ BotBanHang.category.getProduct({id: "5c6b8909c1e29de60e15f72f"})
   ]
 }
 ```
+- Truy vấn danh sách sản phẩm theo danh mục, có tìm kiếm và phân trang
+```
+BotBanHang.category.getListProduct({
+      parent: "id_danh_muc", 
+      limit: "gioi_han_ban_ghi", // number
+      skip: "phan_trang", // number
+      search: "tim_kiem" // string
+    })
+```
+- Request Example:
+```
+BotBanHang.category.getListProduct({
+      parent: "5c6adf5051fc690848bd09da",
+      limit: "20",
+      skip: "0",
+      search: "trang"
+    })
+```
+- Response Example:
+```
+{
+  "data": [
+    {
+      "page": "5c0729df6f92d42919aff017",
+      "parent": "5c6adf5051fc690848bd09da",
+      "status": 1,
+      "title": "áo khoac nam thoi trang",
+      "level": 3,
+      "price": 0,
+      "images_url": [
+        "https://media.botbanhang.vn/uploads/5c0729df6f92d42919aff017/9aa977db-382f-48a5-8869-ca3861e5946a.png"
+      ],
+      "discount": 0,
+      "product_type": "product",
+      "stock": 100,
+      "index": 1,
+      "subtitle": "",
+      "symbol": "đ",
+      "quantity": 0,
+      "description": "",
+      "weight": 0,
+      "image_url": "https://media.botbanhang.vn/no-image.png",
+      "can_order_oversell": false,
+      "is_private": false,
+      "uuid": "79805a50-3400-11e9-80fd-3bfe4be0b045",
+      "createdAt": "2019-02-19T04:40:25.461Z",
+      "updatedAt": "2019-02-19T04:40:25.461Z",
+      "id": "5c6b88b9445a21e70e4eeb1d"
+    }
+  ]
+}
+```
 ### 3. ME
 - Truy vấn thông tin người đang truy cập
 ```
