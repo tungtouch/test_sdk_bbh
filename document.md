@@ -530,6 +530,9 @@ BotBanHang.order.getCart()
           "https://media.botbanhang.vn/uploads/5c0729df6f92d42919aff017/0b107770-f196-4a3f-9196-89a68732912d.png"
         ],
         "quantity": 1
+      },
+      {
+        // Sản phẩm tiếp theo
       }
     ],
     "total_price": 999,
