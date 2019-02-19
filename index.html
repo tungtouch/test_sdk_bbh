@@ -14,30 +14,30 @@
       version: "v1.3"
     })
 
-    var category = BotBanHang.category.getCategory()
-    console.log('BotBanHang.category.getCategory', category)
+    // var category = BotBanHang.category.getCategory()
+    // console.log('BotBanHang.category.getCategory', category)
 
-    var product = BotBanHang.category.getProduct({})
-    console.log('Danh sach toan bo san pham', product)
-
-
-    var product = BotBanHang.category.getProduct({ id: "5c6b8909c1e29de60e15f72f" })
-    console.log('Tim kiem 1 sp', product)
+    // var product = BotBanHang.category.getProduct({})
+    // console.log('Danh sach toan bo san pham', product)
 
 
-    var listproduct = BotBanHang.category.getListProduct({
-      parent: "5c6adf5051fc690848bd09da", //id cua danh muc
-      limit: "20",
-      skip: "0",
-      search: "trang"
-    })
-    console.log('listproduct', listproduct)
+    // var product = BotBanHang.category.getProduct({ id: "5c6b8909c1e29de60e15f72f" })
+    // console.log('Tim kiem 1 sp', product)
 
-    var me = BotBanHang.user.me()
-    console.log('Thong tin cua toi', me)
 
-    var contact = BotBanHang.user.getContacts()
-    console.log('contact', contact)
+    // var listproduct = BotBanHang.category.getListProduct({
+    //   parent: "5c6adf5051fc690848bd09da", //id cua danh muc
+    //   limit: "20",
+    //   skip: "0",
+    //   search: "trang"
+    // })
+    // console.log('listproduct', listproduct)
+
+    // var me = BotBanHang.user.me()
+    // console.log('Thong tin cua toi', me)
+
+    // var contact = BotBanHang.user.getContacts()
+    // console.log('contact', contact)
 
     // var addcontact = BotBanHang.user.addContact({
     //   name: "Minh Thien",
@@ -50,13 +50,16 @@
     // console.log('THem dia chi', addcontact)
 
     // var delcontact = BotBanHang.user.removeContact({id: "5c6bb4996b255bae66a88e61"})
-    var delcontact = BotBanHang.user.removeContact("5c6bb4996b255bae66a88e61")
-    console.log('xoa lien lac', delcontact)
+    // var delcontact = BotBanHang.user.removeContact("5c6bb4996b255bae66a88e61")
+    // console.log('xoa lien lac', delcontact)
+
+    var activeFlow = BotBanHang.user.activeFlow({flow: "5c072d9ee503e8855fd52c2c"})
+    console.log('kich hoat kich ban',activeFlow)
   </script>
 </head>
 
 <body>
-  test del
+  test kb
 </body>
 
 </html>
