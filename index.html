@@ -15,25 +15,26 @@
     })
 
     var category = BotBanHang.category.getCategory()
-    console.log(category)
-    var product = BotBanHang.category.getProduct({})
-    console.log(product)
+    console.log('BotBanHang.category.getCategory',category)
 
-    // loi
-    var product = BotBanHang.category.getProduct({ id: "5c347603140772e4247bfcf1" })
+    var product = BotBanHang.category.getProduct({})
+    console.log('Danh sach toan bo san pham',product)
+
+    
+    var product = BotBanHang.category.getProduct({ id: "5c6b8909c1e29de60e15f72f" })
     console.log('Tim kiem 1 sp', product)
 
 
     var listproduct = BotBanHang.category.getListProduct({
-      parent: "5b9b650b5432a6897f390797", //id cua danh muc
+      parent: "5c6adf2481bdebfa1c411fa2", //id cua danh muc
       limit: "20",
       skip: "0",
-      search: "n"
+      search: ""
     })
-    console.log(listproduct)
+    console.log('listproduct',listproduct)
 
     var me = BotBanHang.user.me()
-    console.log(me)
+    console.log('Thong tin cua toi',me)
   </script>
 </head>
 
