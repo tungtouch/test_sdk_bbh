@@ -139,4 +139,64 @@ BotBanHang.category.getProduct({})
   ]
 }
 ```
-- Truy vấn 
+- Truy vấn tìm kiếm một sản phẩm dựa trên `ID`
+```
+BotBanHang.category.getProduct({id: "id_san_pham"})
+```
+- Request Example:
+```
+BotBanHang.category.getProduct({id: "5c6b8909c1e29de60e15f72f"})
+```
+- Response Example:
+```
+{
+  "data": [
+    {
+      "page": "5c0729df6f92d42919aff017", // ID của page trong BOT BÁN HÀNG
+      "parent": "5c6adf5051fc690848bd09da", // ID của danh mục
+      "status": 1,
+      "title": "ao nam sau", // Tiêu đề
+      "level": 3,
+      "price": 0,
+      "images_url": [
+        "https://media.botbanhang.vn/uploads/5c0729df6f92d42919aff017/c59983d4-e3c0-409f-802e-ca0c183523e5.png"
+      ],
+      "discount": 0,
+      "product_type": "product",
+      "stock": 100,
+      "index": 1,
+      "subtitle": "",
+      "symbol": "đ",
+      "quantity": 0,
+      "description": "",
+      "weight": 0,
+      "image_url": "https://media.botbanhang.vn/no-image.png",
+      "can_order_oversell": false,
+      "is_private": false,
+      "uuid": "a9160df0-3400-11e9-babb-d9c2c8af0c7a",
+      "createdAt": "2019-02-19T04:41:45.295Z",
+      "updatedAt": "2019-02-19T04:41:45.295Z",
+      "id": "5c6b8909c1e29de60e15f72f" // ID sản phẩm
+    }
+  ]
+}
+```
+### 3. ME
+- Truy vấn thông tin người đang truy cập
+```
+BotBanHang.user.me()
+```
+- Response Example:
+```
+{
+  "data": {
+    "id": "5c072e5fe503e8855fd52e47", // ID của người truy cập
+    "first_name": "TriÂn",
+    "last_name": "HộpThư",
+    "name": "TriÂn HộpThư",
+    "gender": "male",
+    "avatar": "/avatar/2874888275870129",
+    "email": null
+  }
+}
+```
