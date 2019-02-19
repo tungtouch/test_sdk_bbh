@@ -1,0 +1,40 @@
+{
+  "order": {
+    "page": "5c0729df6f92d42919aff017",
+    "client": "5c072e5fe503e8855fd52e47",
+    "userid": "2874888275870129",
+    "name_ship": "TriÂn HộpThư",
+    "orders": [
+      {
+        "id": "5c6baf2b6b255bae66a88ba2"
+
+      },
+      {
+        "id": "5c6c155f62bfdde966ed7750"
+
+      }
+    ],
+    "total_price": 13883,
+    "total_quantity": 6,
+    "status": "pending",
+    "is_paid": false,
+    "is_reviewed": false,
+    "uuid": "c3167ee0-3420-11e9-84eb-f5dd34a6a347",
+    "idorder": 1273526,
+    "createdAt": "2019-02-19T08:31:32.815Z",
+    "updatedAt": "2019-02-19T15:48:11.487Z",
+    "id": "5c6bbee462bfdde966ed42d7",
+    "contact": "5c6baf716b255bae66a88bc1",
+    "tel_ship": "0333776915",
+    "address_ship": "dd,ddd,ddd",
+    "province_ship": "64",
+    "province_name": "Gia Lai",
+    "district_ship": "638",
+    "district_name": "Phú Thiện",
+    "email": null,
+    "payment": "",
+    "promotion": null,
+    "phone": "+84333776915"
+  },
+  "type": "confirm"
+}
