@@ -69,7 +69,28 @@
     console.log('getcar', getcar)
 
     var dathang = BotBanHang.order.checkout({
-      order: "5c6bbee462bfdde966ed42d7",
+      order: [
+        {
+          "id": "5c6baf2b6b255bae66a88ba2",
+          "title": "ao",
+          "price": 1000,
+          "discount": 999,
+          "images_url": [
+            "https://media.botbanhang.vn/uploads/5c0729df6f92d42919aff017/0b107770-f196-4a3f-9196-89a68732912d.png"
+          ],
+          "quantity": 5
+        },
+        {
+          "id": "5c6c155f62bfdde966ed7750",
+          "title": "quan",
+          "price": 8888,
+          "discount": 0,
+          "images_url": [
+            "https://media.botbanhang.vn/uploads/5c0729df6f92d42919aff017/241e4451-380c-4957-9661-75286f0fa54d.png"
+          ],
+          "quantity": 1
+        }
+      ],
       contact: "5c6baf716b255bae66a88bc1",
       name_ship: "TriÂn HộpThư",
       tel_ship: "0333776915",
@@ -81,11 +102,11 @@
     })
     console.log('dathang', dathang)
 
-    setTimeout(()=>{
-  var getcar = BotBanHang.order.getCart()
+    setTimeout(() => {
+      var getcar = BotBanHang.order.getCart()
       console.log('getcar sau cn', getcar)
     }, 3000)
-    
+
 
 
 
