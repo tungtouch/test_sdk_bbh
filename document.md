@@ -540,77 +540,59 @@ BotBanHang.order.getCart()
   }
 }
 ```
-- Thêm sản phẩm vào giỏ hàng
+- Cập nhật lại thông tin trong giỏ hàng
 ```
 BotBanHang.order.updateCart({orders})
 ```
 - Request Example:
 ```
-{
-  "orders": [
-    {
-      "page": "5c0729df6f92d42919aff017",
-      "parent": "5c6adf681e622d0d48ff15ca",
-      "status": 1,
-      "title": "ao",
-      "level": 3,
-      "price": 1000,
-      "images_url": [
-        "https://media.botbanhang.vn/uploads/5c0729df6f92d42919aff017/0b107770-f196-4a3f-9196-89a68732912d.png"
-      ],
-      "discount": 999,
-      "product_type": "product",
-      "stock": 100,
-      "index": 1,
-      "subtitle": "",
-      "symbol": "đ",
-      "quantity": 5,
-      "description": "",
-      "weight": 0,
-      "image_url": "https://media.botbanhang.vn/no-image.png",
-      "can_order_oversell": false,
-      "is_private": false,
-      "uuid": "63882630-3417-11e9-bbdd-8b75ba94ef7b",
-      "createdAt": "2019-02-19T07:24:27.027Z",
-      "updatedAt": "2019-02-19T07:24:27.027Z",
-      "id": "5c6baf2b6b255bae66a88ba2",
-      "share_content": {
-        "attachment": {
-          "type": "template",
-          "payload": {
-            "template_type": "generic",
-            "elements": [
-              {
-                "title": "ao",
-                "default_action": {
-                  "type": "web_url",
-                  "url": "https://botbanhang.vn/app/2204445623215564/products/5c6baf2b6b255bae66a88ba2",
-                  "messenger_extensions": true,
-                  "webview_height_ratio": "full"
-                },
-                "image_url": "https://media.botbanhang.vn/uploads/5c0729df6f92d42919aff017/0b107770-f196-4a3f-9196-89a68732912d.png",
-                "buttons": [
-                  {
-                    "title": "Mua sản phẩm",
-                    "type": "web_url",
-                    "url": "http://m.me/2204445623215564?ref=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwcm9kdWN0IjoiNWM2YmFmMmI2YjI1NWJhZTY2YTg4YmEyIiwiaWF0IjoxNTUwNTY1MDkyLCJleHAiOjE1NTE0MjkwOTIsImF1ZCI6IjEiLCJpc3MiOiIxIn0.zJGX1Vx4n60kQ_G0a2LsqtnFrMEnzwWUbE9E4KZDRP8"
-                  }
-                ]
-              }
-            ]
-          }
+BotBanHang.order.updateCart({
+      orders: [
+        {
+          "id": "5c6baf2b6b255bae66a88ba2",
+          "title": "ao",
+          "price": 1000,
+          "discount": 999,
+          "images_url": [
+            "https://media.botbanhang.vn/uploads/5c0729df6f92d42919aff017/0b107770-f196-4a3f-9196-89a68732912d.png"
+          ],
+          "quantity": 5
+        },
+        {
+          // sản phẩm tiếp theo
         }
-      },
-      "extra_option": {}
-    }
-  ]
-}
+      ]
+    })
 ```
 - Response Example:
 ```
-
+{
+  "data": {
+    "id": "5c6bbee462bfdde966ed42d7",
+    "createdAt": "2019-02-19T08:31:32.815Z",
+    "idorder": 1273526,
+    "updatedAt": "2019-02-19T14:59:52.587Z",
+    "orders": [
+      {
+        "id": "5c6baf2b6b255bae66a88ba2",
+        "title": "ao",
+        "price": 1000,
+        "discount": 999,
+        "images_url": [
+          "https://media.botbanhang.vn/uploads/5c0729df6f92d42919aff017/0b107770-f196-4a3f-9196-89a68732912d.png"
+        ],
+        "quantity": 5
+      },
+      {
+        // Sản phẩm tiếp theo
+      }
+    ],
+    "total_price": 13883,
+    "total_quantity": 6
+  }
+}
 ```
-- Đặt hàng
+- Thưc hiện hành động đặt hàng (Checkout)
 ```
 BotBanHang.order.checkout({order, contact, name_ship, tel_ship, address_ship, province_ship, district_ship, email, note})
 ```
